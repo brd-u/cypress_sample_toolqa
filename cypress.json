@@ -1,6 +1,6 @@
 {
 
-  "baseUrl": "https://example.cypress.io",
+  "baseUrl": "https://dev.edumentors.org",
   "ignoreTestFiles": "**/examples/*",
   "viewportHeight": 768,
   "viewportWidth": 1024,
