@@ -1,9 +1,9 @@
 {
 
-  "baseUrl": "https://dev.edumentors.org",
+  "baseUrl": "https://shop.demoqa.com",
   "ignoreTestFiles": "**/examples/*",
   "viewportHeight": 768,
-  "viewportWidth": 1024,
+  "viewportWidth": 1366,
   "reporter": "mochawesome",
   "reporterOptions": {
     "reportDir": "cypress/reports/mochawesome-report",

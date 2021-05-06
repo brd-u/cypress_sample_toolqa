@@ -1,61 +1,49 @@
 {
-  "name": "cypress-sample",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {
-    "cypress": "^6.4.0",
-    "mochawesome": "^6.2.1",
-    "mochawesome-merge": "^4.2.0",
-    "mochawesome-report-generator": "^5.1.0"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "cy:open": "cypress open",
-    "cy:info": "cypress info",
-    "cy:run": "cypress run",
-
-    "precy:run:chrome": "npm run delete:reports",
-    "cy:run:chrome": "cypress run --browser chrome",
-    "postcy:run:chrome": "npm run final:report",
-
-    "precy:run:firefox": "npm run delete:reports",
-    "cy:run:firefox": "cypress run --browser firefox",
-    "postcy:run:firefox": "npm run final:report",
-
-    "precy:run:edge": "npm run delete:reports",
-    "cy:run:edge": "cypress run --browser edge",
-    "postcy:run:edge": "npm run final:report",
-
-    "precy:run:electron": "npm run delete:reports",
-    "cy:run:electron": "cypress run --browser electron",
-    "postcy:run:electron": "npm run final:report",
-
-
-    "precy:run:chrome:headless": "npm run delete:reports",
-    "cy:run:chrome:headless": "cypress run --browser chrome --headless",
-    "postcy:run:chrome:headless": "npm run final:report",
-
-    "precy:run:firefox:headless": "npm run delete:reports",
-    "cy:run:firefox:headless": "cypress run --browser firefox --headless",
-    "postcy:run:firefox:headless": "npm run final:report",
-
-    "precy:run:edge:headless": "npm run delete:reports",
-    "cy:run:edge:headless": "cypress run --browser edge --headless",
-    "postcy:run:edge:headless": "npm run final:report",
-
-    "precy:run:electron:headless": "npm run delete:reports",
-    "cy:run:electron:headless": "cypress run --browser electron --headless",
-    "postcy:run:electron:headless": "npm run final:report",
-
-    "merge": "mochawesome-merge cypress/reports/mochawesome-report/*.json > cypress/reports/final/finalReport.json",
-    "generate_mochawesome_report": "marge cypress/reports/final/finalReport.json --reportDir ./ --inline",
-
-    "final:report": "npm run merge && npm run generate_mochawesome_report",
-
-    "delete:reports": "del /s /q cypress\\reports\\"
-  },
-  "author": "MB",
-  "license": "ISC"
+    "name": "cypress-sample",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "dependencies": {},
+    "devDependencies": {
+        "cypress": "^7.2.0",
+        "mochawesome": "^6.2.1",
+        "mochawesome-merge": "^4.2.0",
+        "mochawesome-report-generator": "^5.1.0"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "cy:open": "cypress open",
+        "cy:info": "cypress info",
+        "cy:run": "cypress run",
+        "precy:run:chrome": "npm run delete:reports",
+        "cy:run:chrome": "cypress run --browser chrome",
+        "postcy:run:chrome": "npm run final:report",
+        "precy:run:firefox": "npm run delete:reports",
+        "cy:run:firefox": "cypress run --browser firefox",
+        "postcy:run:firefox": "npm run final:report",
+        "precy:run:edge": "npm run delete:reports",
+        "cy:run:edge": "cypress run --browser edge",
+        "postcy:run:edge": "npm run final:report",
+        "precy:run:electron": "npm run delete:reports",
+        "cy:run:electron": "cypress run --browser electron",
+        "postcy:run:electron": "npm run final:report",
+        "precy:run:chrome:headless": "npm run delete:reports",
+        "cy:run:chrome:headless": "cypress run --browser chrome --headless",
+        "postcy:run:chrome:headless": "npm run final:report",
+        "precy:run:firefox:headless": "npm run delete:reports",
+        "cy:run:firefox:headless": "cypress run --browser firefox --headless",
+        "postcy:run:firefox:headless": "npm run final:report",
+        "precy:run:edge:headless": "npm run delete:reports",
+        "cy:run:edge:headless": "cypress run --browser edge --headless",
+        "postcy:run:edge:headless": "npm run final:report",
+        "precy:run:electron:headless": "npm run delete:reports",
+        "cy:run:electron:headless": "cypress run --browser electron --headless",
+        "postcy:run:electron:headless": "npm run final:report",
+        "merge": "mochawesome-merge cypress/reports/mochawesome-report/*.json > cypress/reports/final/finalReport.json",
+        "generate_mochawesome_report": "marge cypress/reports/final/finalReport.json --reportDir ./ --inline",
+        "final:report": "npm run merge && npm run generate_mochawesome_report",
+        "delete:reports": "del /s /q cypress\\reports\\"
+    },
+    "author": "MB",
+    "license": "ISC"
 }
