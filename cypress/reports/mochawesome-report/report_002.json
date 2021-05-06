@@ -1,0 +1,207 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-05-05T10:39:38.156Z",
+    "end": "2021-05-05T10:39:38.601Z",
+    "duration": 445,
+    "testsRegistered": 6,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 5,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "34475a5a-e2ce-4541-a82b-1bbc27cee9ed",
+      "title": "",
+      "fullFile": "cypress/integration/user/login_spec.js",
+      "file": "cypress/integration/user/login_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "94380eaa-be8e-4a32-a77e-9f01daf89ece",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "greets with Sign in",
+              "fullTitle": "Login greets with Sign in",
+              "timedOut": null,
+              "duration": 376,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('.login-header', 'Logowanie');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://brd-u.github.io/login\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Login`",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://brd-u.github.io/login\n\nThe response we received from your web server was:\n\n  > 404: Not Found\n\nThis was considered a failure because the status code was not `2xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Login`\n    at https://brd-u.github.io/__cypress/runner/cypress_runner.js:138565:25\n    at visitFailedByErr (https://brd-u.github.io/__cypress/runner/cypress_runner.js:137940:12)\n    at https://brd-u.github.io/__cypress/runner/cypress_runner.js:138545:13\n    at tryCatcher (https://brd-u.github.io/__cypress/runner/cypress_runner.js:10791:23)\n    at Promise._settlePromiseFromHandler (https://brd-u.github.io/__cypress/runner/cypress_runner.js:8726:31)\n    at Promise._settlePromise (https://brd-u.github.io/__cypress/runner/cypress_runner.js:8783:18)\n    at Promise._settlePromise0 (https://brd-u.github.io/__cypress/runner/cypress_runner.js:8828:10)\n    at Promise._settlePromises (https://brd-u.github.io/__cypress/runner/cypress_runner.js:8904:18)\n    at _drainQueueStep (https://brd-u.github.io/__cypress/runner/cypress_runner.js:5498:12)\n    at _drainQueue (https://brd-u.github.io/__cypress/runner/cypress_runner.js:5491:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://brd-u.github.io/__cypress/runner/cypress_runner.js:5507:5)\n    at Async.drainQueues (https://brd-u.github.io/__cypress/runner/cypress_runner.js:5377:14)\nFrom Your Spec Code:\n    at Context.eval (https://brd-u.github.io/__cypress/tests?p=cypress\\integration\\user\\login_spec.js:101:8)",
+                "diff": null
+              },
+              "uuid": "c6b678fe-4912-4ad9-b409-0c719bda690b",
+              "parentUUID": "94380eaa-be8e-4a32-a77e-9f01daf89ece",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "links to Register",
+              "fullTitle": "Login links to Register",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('tutaj').should('have.attr', 'href', '/register');",
+              "err": {},
+              "uuid": "8e2e5f8c-0033-4319-8809-14a6a08b7ccc",
+              "parentUUID": "94380eaa-be8e-4a32-a77e-9f01daf89ece",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "requires email and password",
+              "fullTitle": "Login requires email and password",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.mat-button-wrapper').contains('ZALOGUJ').click();\ncy.get('mat-error[id=\"mat-error-0\"]').should('contain', 'Pole wymagane');\ncy.get('mat-error[id=\"mat-error-1\"]').should('contain', 'Pole wymagane');",
+              "err": {},
+              "uuid": "362b5290-f3d2-4f3a-a423-db669e58fa4d",
+              "parentUUID": "94380eaa-be8e-4a32-a77e-9f01daf89ece",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "requires password",
+              "fullTitle": "Login requires password",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[name=\"forname\"]').type('test@test.com{enter}');\ncy.get('mat-error[id=\"mat-error-0\"]').should('not.exist');\ncy.get('mat-error[id=\"mat-error-1\"]').should('contain', 'Pole wymagane');",
+              "err": {},
+              "uuid": "42d99b6f-1880-4c37-82cd-8768c50fb416",
+              "parentUUID": "94380eaa-be8e-4a32-a77e-9f01daf89ece",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "navigates to home page on successful login",
+              "fullTitle": "Login navigates to home page on successful login",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const userMail = Cypress.env('userMail');\nconst password = Cypress.env('password');\ncy.get('app-menu-item').contains('Logowanie');\ncy.get('app-menu-item').contains('Rejestracja');\ncy.get('input[name=\"forname\"]').type(userMail, {\n  log: false\n});\ncy.get('input[name=\"forpass\"]').type(password, {\n  log: false\n});\ncy.get('.mat-button-wrapper').contains('ZALOGUJ').click();\ncy.get('app-menu-item').contains('Logowanie').should('not.exist');\ncy.get('app-menu-item').contains('Rejestracja').should('not.exist');\ncy.hash().should('eq', '');",
+              "err": {},
+              "uuid": "a0db5d50-08b4-48a3-a33f-a98610432e9f",
+              "parentUUID": "94380eaa-be8e-4a32-a77e-9f01daf89ece",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "requires valid username and password",
+              "fullTitle": "Login requires valid username and password",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('app-menu-item').contains('Logowanie');\ncy.get('app-menu-item').contains('Rejestracja');\ncy.get('input[name=\"forname\"]').type(\"test@test.mail\", {\n  log: false\n});\ncy.get('input[name=\"forpass\"]').type(\"wrongPass\", {\n  log: false\n});\ncy.get('.mat-button-wrapper').contains('ZALOGUJ').click();\ncy.get('mat-error[id=\"mat-error-0\"]').should('contain', 'Niepoprawne dane logowania.');\ncy.get('mat-error[id=\"mat-error-1\"]').should('contain', 'Niepoprawne dane logowania.');\ncy.get(\".toaster-message\").should('contain', \"Niepoprawne dane logowania.\");",
+              "err": {},
+              "uuid": "52ebaa6e-8aa0-4215-a1d8-1a16ce1e5a8c",
+              "parentUUID": "94380eaa-be8e-4a32-a77e-9f01daf89ece",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "c6b678fe-4912-4ad9-b409-0c719bda690b"
+          ],
+          "pending": [],
+          "skipped": [
+            "8e2e5f8c-0033-4319-8809-14a6a08b7ccc",
+            "362b5290-f3d2-4f3a-a423-db669e58fa4d",
+            "42d99b6f-1880-4c37-82cd-8768c50fb416",
+            "a0db5d50-08b4-48a3-a33f-a98610432e9f",
+            "52ebaa6e-8aa0-4215-a1d8-1a16ce1e5a8c"
+          ],
+          "duration": 376,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome-report",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "charts": false
+      },
+      "version": "5.1.0"
+    }
+  }
+}
