@@ -13,6 +13,11 @@
     "json": true,
     "charts": false
   },
+  "retries": {
+
+    "runMode": 1,
+    "openMode": 0
+  },
 
   "video": false
 }
